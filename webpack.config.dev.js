@@ -35,6 +35,7 @@ module.exports = {
 			'@styles': path.resolve(__dirname, 'src/styles'),
 			'@src': path.resolve(__dirname, 'src/'),
 			'@hooks': path.resolve(__dirname, 'src/hooks'),
+			'@consts': path.resolve(__dirname, 'src/consts'),
 		},
 	},
 	plugins: [
