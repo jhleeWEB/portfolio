@@ -25,6 +25,14 @@ module.exports = {
 				test: /\.css$/,
 				use: ['style-loader', 'css-loader'],
 			},
+			{
+				test: /\.(png|jpe?g|gif|webp|svg)$/i,
+				loader: 'file-loader',
+				options: {
+					name: '[name].[ext]',
+					outputPath: 'assets/images',
+				},
+			},
 		],
 	},
 	resolve: {
@@ -36,6 +44,7 @@ module.exports = {
 			'@src': path.resolve(__dirname, 'src/'),
 			'@hooks': path.resolve(__dirname, 'src/hooks'),
 			'@consts': path.resolve(__dirname, 'src/consts'),
+			'@assets': path.resolve(__dirname, 'src/assets'),
 		},
 	},
 	plugins: [

@@ -24,6 +24,7 @@
 	"dependencies": {
 		"@types/antd": "^0.12.32",
 		"antd": "^5.24.4",
+		"file-loader": "^6.2.0",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
 		"typescript": "^5.8.2"
