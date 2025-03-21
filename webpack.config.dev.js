@@ -22,6 +22,14 @@ module.exports = {
 				use: 'ts-loader',
 			},
 			{
+				test: /\.(svg|jpg|jpeg|webp)$/,
+				use: [
+					{
+						loader: 'file-loader',
+					},
+				],
+			},
+			{
 				test: /\.css$/,
 				include: path.resolve(__dirname, 'src'),
 				use: ['style-loader', 'css-loader', 'postcss-loader'],
