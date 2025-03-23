@@ -1,13 +1,13 @@
-import { styled } from 'styled-components';
+import Container from '../Container';
 import Developer from './Developer';
-
-const Wrapper = styled.div(({}) => ({}));
+import FloatingComponents from './FloatingComponents';
 
 const Landing = () => {
 	return (
-		<Wrapper>
+		<Container>
 			<Developer />
-		</Wrapper>
+			<FloatingComponents />
+		</Container>
 	);
 };
 

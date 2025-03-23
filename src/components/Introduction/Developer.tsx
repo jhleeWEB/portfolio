@@ -3,7 +3,7 @@ import { Avatar } from '@heroui/react';
 
 const Developer = () => {
 	return (
-		<div className='flex flex-col items-center'>
+		<div className='flex flex-col items-center justify-center'>
 			<Avatar src={fryLogo} className='w-48 h-48' />
 			<div className='px-4'>
 				<div className='text-2xl font-semibold'>
