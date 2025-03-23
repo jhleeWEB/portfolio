@@ -7,7 +7,7 @@ const Wrapper = styled.div(({}) => ({}));
 
 const Introduction = () => {
 	return (
-		<Wrapper className='container py-8 mt-4 gap-6'>
+		<Wrapper className='container py-8 mb-4'>
 			<Landing />
 			<MyIntro />
 			<MyExperiences />

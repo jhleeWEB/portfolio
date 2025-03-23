@@ -8,6 +8,7 @@ import {
 	TableCell,
 	Chip,
 	Button,
+	Link,
 } from '@heroui/react';
 import { DocumentTextIcon } from '../Icons';
 
@@ -96,7 +97,7 @@ const rows = [
 			duration: '2018.10 ~ 2018.03',
 		},
 		assignments: [
-			'Unity, 게 임 엔진으로 개발한 베트남 사회주택 자동설계 프로그램 개발 참여',
+			'Unity, 게임 엔진으로 개발한 베트남 사회주택 자동설계 프로그램 개발 참여',
 		],
 	},
 	{
@@ -108,7 +109,7 @@ const rows = [
 			duration: '2017.03 ~ 2017.10',
 		},
 		assignments: [
-			'Rhino, 2D, 3D모델링 툴 플러그인으로 가로주택정비사업 검토 프로그램 개발 참여',
+			'Rhino, 2D, 3D모델링 툴 플러그인으로 납품한 가로주택정비사업 검토 프로그램 개발 참여',
 		],
 	},
 ];
@@ -126,10 +127,14 @@ const BodyContent = () => {
 					<TableRow key={row.key}>
 						<TableCell>
 							<h1 className='text-lg font-semibold'>{row.project.name}</h1>
-							<a>{row.project.url}</a>
-							<div>
+							{row.project.url !== '-' && (
+								<Link size='sm' href={row.project.url} showAnchorIcon>
+									{row.project.url}
+								</Link>
+							)}
+							<div className='flex gap-2'>
 								{row.project.role.map((n) => (
-									<Chip>{n}</Chip>
+									<Chip size='sm'>{n}</Chip>
 								))}
 							</div>
 							<small>{row.project.duration}</small>
@@ -137,7 +142,7 @@ const BodyContent = () => {
 						<TableCell>
 							<ul>
 								{row.assignments.map((n) => (
-									<li>{n}</li>
+									<li className='flex'>· {n}</li>
 								))}
 							</ul>
 						</TableCell>
@@ -148,137 +153,6 @@ const BodyContent = () => {
 						</TableCell>
 					</TableRow>
 				))}
-				{/* <TableRow key='1'>
-					<TableCell className='flex flex-col'>
-						<h1 className='text-lg font-semibold'>Landbook v2.0</h1>
-						<a>https://www.landbook.net</a>
-						<div>
-							<Chip>프론트엔드 개발자</Chip>
-						</div>
-						<small>2021.3 ~ 2022.08</small>
-					</TableCell>
-					<TableCell>
-						<ul>
-							<li>A/B테스트 및 GTM 도입</li>
-							<li>이미지 로딩 최적화를 통해 SEO 개선</li>
-							<li>Three.js를 활용해 소규모 3D 렌더링 모듈 개발</li>
-							<li>kakao mali alii를 활용해 지도 인터렉션 부분 개발</li>
-							<li>고도화된 유료 보고서 페이지 개발</li>
-							<li>수동으로 진행되던 빌드/배포 파이프라인에 자동화</li>
-						</ul>
-					</TableCell>
-					<TableCell>
-						<Button isIconOnly>
-							<DocumentTextIcon />
-						</Button>
-					</TableCell>
-					<TableCell>
-						<Button isIconOnly>
-							<DocumentTextSolidIcon />
-						</Button>
-					</TableCell>
-				</TableRow>
-				<TableRow key='2'>
-					<TableCell>
-						<h1 className='text-lg font-semibold'>LB Developer</h1>
-						<a>https://lbdeveloper.landbook.net</a>
-						<div>
-							<Chip>프론트엔드 개발자</Chip>
-							<Chip>프로젝트 리드</Chip>
-						</div>
-						<small>2021.3 ~ 2022.08</small>
-					</TableCell>
-					<TableCell>
-						<ul>
-							<li>
-								가로주택정비사업 온라인 검토 서비스 어드민/사용자 웹앱 개발
-							</li>
-							<li>Three.js를 활용해 대규모 3D 렌더링 컴포넌트 개발</li>
-							<li>전역 상태관리 편의성을 위해 Redux-Toolkit 도입</li>
-						</ul>
-					</TableCell>
-					<TableCell>
-						<Button isIconOnly>
-							<DocumentTextIcon />
-						</Button>
-					</TableCell>
-					<TableCell>
-						<Button isIconOnly>
-							<DocumentTextSolidIcon />
-						</Button>
-					</TableCell>
-				</TableRow>
-				<TableRow key='3'>
-					<TableCell>
-						<h1 className='text-lg font-semibold'>Landbook v1.0</h1>
-						<div>
-							<Chip>프로젝트 개발자</Chip>
-						</div>
-						<small>2021.3 ~ 2022.08</small>
-					</TableCell>
-					<TableCell>
-						<ul>
-							<li>
-								Next.js(v6) + React(v15)를 활용해 랜드북 프로젝트 유지보수
-							</li>
-							<li>스타일 체계화를 위해 SCSS 도입</li>
-						</ul>
-					</TableCell>
-					<TableCell>
-						<Button isIconOnly>
-							<DocumentTextIcon />
-						</Button>
-					</TableCell>
-					<TableCell>-</TableCell>
-				</TableRow>
-				<TableRow key='4'>
-					<TableCell>
-						<h1 className='text-lg font-semibold'>
-							베트남 사회주택 자동 설계 프로그램
-						</h1>
-						<div>
-							<Chip>연구원</Chip>
-						</div>
-						<small>2021.3 ~ 2022.08</small>
-					</TableCell>
-					<TableCell>
-						<ul>
-							<li>
-								Unity, 게 임 엔진으로 개발한 베트남 사회주택 자동 설계 프로그램
-								개발 참여
-							</li>
-						</ul>
-					</TableCell>
-					<TableCell>
-						<Button isIconOnly>
-							<DocumentTextIcon />
-						</Button>
-					</TableCell>
-					<TableCell>-</TableCell>
-				</TableRow>
-				<TableRow key='5'>
-					<TableCell>
-						<h1 className='text-lg font-semibold'>가로주택정비사업 프로그램</h1>
-						<div>
-							<Chip>연구원</Chip>
-						</div>
-						<small>2021.3 ~ 2022.08</small>
-					</TableCell>
-					<TableCell>
-						<ul>
-							<li>
-								Rhino, 2D, 3D모델링 툴 플러그인으로 가로주택정비사업 검토
-								프로그램 개발 참여
-							</li>
-						</ul>
-					</TableCell>
-					<TableCell>
-						<Button isIconOnly>
-							<DocumentTextIcon />
-						</Button>
-					</TableCell>
-					<TableCell>-</TableCell>
-				</TableRow> */}
 			</TableBody>
 		</Table>
 	);

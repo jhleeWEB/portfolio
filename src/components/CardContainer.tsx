@@ -7,7 +7,7 @@ type Props = {
 };
 const CardContainer = ({ title, subTitle, bodyContent }: Props) => {
 	return (
-		<Card className='py-4'>
+		<Card className='py-4 mb-12'>
 			<CardHeader className='pb-0 pt-2 px-4 flex-col items-start'>
 				<h4 className='font-bold text-large'>{title}</h4>
 				<p className='text-tiny uppercase font-bold'>{subTitle}</p>
