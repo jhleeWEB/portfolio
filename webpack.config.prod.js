@@ -19,18 +19,35 @@ module.exports = {
 				},
 			},
 			{
-				test: /\.tsx?$/,
+				test: /\.(ts|tsx)$/,
 				exclude: /node_modules/,
 				use: 'ts-loader',
 			},
 			{
+				test: /\.(svg|jpg|jpeg|webp)$/,
+				use: [
+					{
+						loader: 'file-loader',
+					},
+				],
+			},
+			{
 				test: /\.css$/,
-				use: ['style-loader', 'css-loader'],
+				include: path.resolve(__dirname, 'src'),
+				use: ['style-loader', 'css-loader', 'postcss-loader'],
 			},
 		],
 	},
 	resolve: {
 		extensions: ['.js', '.jsx', '.tsx', '.ts'],
+		alias: {
+			'@components': path.resolve(__dirname, 'src/components'),
+			'@assets': path.resolve(__dirname, 'src/assets'),
+			'@styles': path.resolve(__dirname, 'src/styles'),
+			'@src': path.resolve(__dirname, 'src/'),
+			'@hooks': path.resolve(__dirname, 'src/hooks'),
+			'@consts': path.resolve(__dirname, 'src/consts'),
+		},
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
