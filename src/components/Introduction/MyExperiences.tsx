@@ -15,25 +15,18 @@ import { DocumentTextIcon } from '../Icons';
 const rows = [
 	{
 		key: '1',
-		project: {
-			name: 'Landbook v2.0',
-			url: 'https://www.landbook.net',
-			role: ['프론트엔드 개발자'],
-			duration: '2020.01 ~ 2022.08',
+		experience: {
+			name: '작은 프로젝트 프론트엔드 담당',
+			role: ['프론트엔드 담당'],
 		},
 		assignments: [
-			'A/B테스트 및 GTM 도입',
-			'이미지 로딩 최적화를 통해 SEO 개선',
-			'Three.js를 활용해 소규모 3D 렌더링 모듈 개발',
-			'kakao mali alii를 활용해 지도 인터렉션 부분 개발',
-			'고도화된 유료 보고서 페이지 개발',
-			'수동으로 진행되던 빌드/배포 파이프라인에 자동화',
+			'가로주택정비사업 검토 서비스 어드민/사용자 페이지 개발',
+			'Next.js기반 SSR 서비스 개발',
+			'CI/CD 파이프라인 구축',
 		],
-		detail: {
-			objectives: [
-				'AI 자동설계를 활용해 땅의 가치를 추정하는 부동산 플랫폼',
-				'유료 보고서를 통해 고도화된 정보와 가격추정 제공',
-			],
+		retrospects: {
+			video: [],
+			lessons: ['기술선택', '유료 보고서를 통해 고도화된 정보와 가격추정 제공'],
 			accomplishments: [
 				'유료 보고서 서비스 런칭',
 				'편리한 지도 클릭 컴포넌트 개발',
@@ -49,7 +42,7 @@ const rows = [
 	},
 	{
 		key: '2',
-		project: {
+		experience: {
 			name: 'LB Developer',
 			url: 'https://lbdeveloper.landbook.net/',
 			role: ['프론트엔드 개발자', '프로젝트 리드'],
@@ -77,7 +70,7 @@ const rows = [
 	},
 	{
 		key: '3',
-		project: {
+		experience: {
 			name: 'Landbook v1.0',
 			url: '-',
 			role: ['프론트엔드 개발자'],
@@ -90,7 +83,7 @@ const rows = [
 	},
 	{
 		key: '4',
-		project: {
+		experience: {
 			name: '베트남 사회주택 자동설계 프로그램',
 			url: '-',
 			role: ['연구원'],
@@ -102,7 +95,7 @@ const rows = [
 	},
 	{
 		key: '5',
-		project: {
+		experience: {
 			name: '가로주택 정비사업 플러그인',
 			url: '-',
 			role: ['연구원'],
@@ -126,18 +119,18 @@ const BodyContent = () => {
 				{rows.map((row) => (
 					<TableRow key={row.key}>
 						<TableCell>
-							<h1 className='text-lg font-semibold'>{row.project.name}</h1>
-							{row.project.url !== '-' && (
-								<Link size='sm' href={row.project.url} showAnchorIcon>
-									{row.project.url}
+							<h1 className='text-lg font-semibold'>{row.experience.name}</h1>
+							{row.experience.url !== '-' && (
+								<Link size='sm' href={row.experience.url} showAnchorIcon>
+									{row.experience.url}
 								</Link>
 							)}
 							<div className='flex gap-2'>
-								{row.project.role.map((n) => (
+								{row.experience.role.map((n) => (
 									<Chip size='sm'>{n}</Chip>
 								))}
 							</div>
-							<small>{row.project.duration}</small>
+							<small>{row.experience.duration}</small>
 						</TableCell>
 						<TableCell>
 							<ul>
@@ -161,7 +154,7 @@ const MyExperiences = () => {
 	return (
 		<CardContainer
 			title='Experiences'
-			subTitle='붚투명한 부동산 정보를 모두 공평하게 제공하는 서비스를 개발했으며, 가치있는 제품을 만들었습니다'
+			subTitle='실패를 통해 배우고, 배움을 통해 성장해갑니다'
 			bodyContent={<BodyContent />}
 		/>
 	);
