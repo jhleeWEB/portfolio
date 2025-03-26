@@ -28,15 +28,21 @@ const HeaderNavBar = () => {
 			<NavbarBrand>
 				<p>LEE JOONG HOON</p>
 			</NavbarBrand>
-			<NavbarContent className='sm:flex gap-4' justify='center'>
+			<NavbarContent className='sm:flex gap-8' justify='center'>
 				<NavbarItem>
-					<Link href='#introduction'>Introduction</Link>
+					<Link color='foreground' href='#introduction'>
+						Introduction
+					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link href='#projects'>Projects</Link>
+					<Link color='foreground' href='#projects'>
+						Projects
+					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link href='#skills'>Skills</Link>
+					<Link color='foreground' href='#skills'>
+						Skills
+					</Link>
 				</NavbarItem>
 			</NavbarContent>
 			<NavbarContent justify='end'>
