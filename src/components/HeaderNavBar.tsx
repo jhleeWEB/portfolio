@@ -26,21 +26,21 @@ const HeaderNavBar = () => {
 	return (
 		<Navbar shouldHideOnScroll isBordered>
 			<NavbarBrand>
-				<p>LEE JOONG HOON</p>
+				<p className='text-lg font-black'>LEE JOONG HOON</p>
 			</NavbarBrand>
 			<NavbarContent className='sm:flex gap-8' justify='center'>
 				<NavbarItem>
-					<Link color='foreground' href='#introduction'>
+					<Link color='foreground' href='#introduction' className='text-lg'>
 						Introduction
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link color='foreground' href='#projects'>
+					<Link color='foreground' href='#projects' className='text-lg'>
 						Projects
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link color='foreground' href='#skills'>
+					<Link color='foreground' href='#skills' className='text-lg'>
 						Skills
 					</Link>
 				</NavbarItem>
