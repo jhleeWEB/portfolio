@@ -15,7 +15,7 @@ const CardContainer = ({ title, subTitle, bodyContent }: Props) => {
 	}, [inView]);
 
 	return (
-		<Card ref={ref} className='py-4 mb-12'>
+		<Card ref={ref} className='container py-8 px-4 mb-12'>
 			<div
 				className={`opacity 0.6s ease-in-out, top 0.6s ease-in-out duration-700 ${
 					inView ? 'opacity-100' : 'opacity-0'
@@ -25,9 +25,7 @@ const CardContainer = ({ title, subTitle, bodyContent }: Props) => {
 					<h4 className='font-bold text-large'>{title}</h4>
 					<p className='text-tiny uppercase font-bold'>{subTitle}</p>
 				</CardHeader>
-				<CardBody className='overflow-visible py-2 gap-4'>
-					{bodyContent}
-				</CardBody>
+				<CardBody className='overflow-visible gap-4 '>{bodyContent}</CardBody>
 			</div>
 		</Card>
 	);
