@@ -8,7 +8,7 @@ type Props = {
 	children: React.ReactElement;
 };
 export const ListboxWrapper = ({ children }: Props) => (
-	<div className='w-full max-w-[260px] border-small px-1 py-2 rounded-small border-default-200 dark:border-default-100 animate-float'>
+	<div className='w-full max-w-[180px] border-small px-1 py-2 rounded-small border-default-200 dark:border-default-100 animate-float'>
 		{children}
 	</div>
 );
@@ -55,12 +55,19 @@ function Sample1() {
 }
 
 function Sample2() {
-	return <Pagination className='animate-float' initialPage={1} total={10} />;
+	return (
+		<Pagination
+			className='animate-float'
+			size='sm'
+			initialPage={1}
+			total={10}
+		/>
+	);
 }
 
 function Sample3() {
 	return (
-		<div className='flex w-full flex-wrap md:flex-nowrap gap-4 animate-float-slow'>
+		<div className='flex flex-wrap md:flex-nowrap gap-4 animate-float-slow'>
 			<DatePicker isRequired className='max-w-[284px]' label='Birth date' />
 		</div>
 	);
@@ -98,8 +105,6 @@ function Sample5() {
 			<Breadcrumbs variant='bordered'>
 				<BreadcrumbItem>Next.js</BreadcrumbItem>
 				<BreadcrumbItem>React</BreadcrumbItem>
-				<BreadcrumbItem>Redux</BreadcrumbItem>
-				<BreadcrumbItem>React-Query</BreadcrumbItem>
 				<BreadcrumbItem>4년</BreadcrumbItem>
 			</Breadcrumbs>
 		</div>
