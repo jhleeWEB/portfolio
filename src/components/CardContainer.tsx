@@ -3,11 +3,12 @@ import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 type Props = {
+	id?: string;
 	title: string;
 	subTitle: string;
 	bodyContent: React.ReactElement;
 };
-const CardContainer = ({ title, subTitle, bodyContent }: Props) => {
+const CardContainer = ({ id = '', title, subTitle, bodyContent }: Props) => {
 	const { ref, inView } = useInView({ threshold: 0, rootMargin: '-100px' });
 
 	useEffect(() => {
@@ -15,7 +16,7 @@ const CardContainer = ({ title, subTitle, bodyContent }: Props) => {
 	}, [inView]);
 
 	return (
-		<Card ref={ref} className='container py-8 px-4 mb-12'>
+		<Card ref={ref} id={id} className='container py-8 px-4 mb-12'>
 			<div
 				className={`opacity 0.6s ease-in-out, top 0.6s ease-in-out duration-700 ${
 					inView ? 'opacity-100' : 'opacity-0'

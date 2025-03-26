@@ -113,6 +113,7 @@ const BodyContent = () => {
 const MySkills = () => {
 	return (
 		<CardContainer
+			id='skills'
 			title='Stack'
 			subTitle='제너럴리스트가 되고 싶은 스페셜리스트입니다. 맡은 업무에서는 스페셜리스트, 취미로는 제너럴리스트'
 			bodyContent={<BodyContent />}

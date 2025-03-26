@@ -29,7 +29,7 @@ const HeaderNavBar = () => {
 			</NavbarBrand>
 			<NavbarContent className='sm:flex gap-4' justify='center'>
 				<NavbarItem>
-					<Link href='#experiences'>Experiences</Link>
+					<Link href='#introduction'>Introduction</Link>
 				</NavbarItem>
 				<NavbarItem>
 					<Link href='#projects'>Projects</Link>

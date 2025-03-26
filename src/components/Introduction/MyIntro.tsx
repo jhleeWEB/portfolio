@@ -28,6 +28,7 @@ const BodyContent = () => {
 const MyIntro = () => {
 	return (
 		<CardContainer
+			id='introduction'
 			title='Introduction'
 			subTitle='꾸준함을 추구하는 프론트엔드 개발자 이중훈입니다'
 			bodyContent={<BodyContent />}

@@ -207,6 +207,7 @@ const BodyContent = () => {
 const MyProjects = () => {
 	return (
 		<CardContainer
+			id='projects'
 			title='Projects'
 			subTitle='편리하고 가치 있는 부동산 서비스를 개발했습니다'
 			bodyContent={<BodyContent />}
