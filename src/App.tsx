@@ -3,10 +3,12 @@ import Introduction from './components/Introduction/Introduction';
 
 const App = () => {
 	return (
-		<div className='flex flex-col items-center justify-center w-full h-full'>
+		<main
+			className={`text-foreground bg-background flex flex-col items-center justify-center w-full h-full`}
+		>
 			<HeaderNavBar />
 			<Introduction />
-		</div>
+		</main>
 	);
 };
 export default App;
