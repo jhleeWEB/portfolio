@@ -7,7 +7,6 @@ import {
 	TableRow,
 	TableCell,
 	Chip,
-	Button,
 	Link,
 } from '@heroui/react';
 import DetailInfoModal from '../DetailInfoModal';
@@ -178,7 +177,9 @@ const BodyContent = () => {
 							)}
 							<div className='flex gap-2'>
 								{row.project.role.map((n) => (
-									<Chip size='sm'>{n}</Chip>
+									<Chip key={n} size='sm'>
+										{n}
+									</Chip>
 								))}
 							</div>
 							<small>{row.project.duration}</small>
@@ -186,17 +187,17 @@ const BodyContent = () => {
 						<TableCell>
 							<ul>
 								{row.assignments.map((n) => (
-									<li className='flex'>· {n}</li>
+									<li key={n} className='flex'>
+										· {n}
+									</li>
 								))}
 							</ul>
 						</TableCell>
 						<TableCell>
-							<Button isIconOnly>
-								<DetailInfoModal
-									title={row.project.name}
-									content={row.modalContent}
-								/>
-							</Button>
+							<DetailInfoModal
+								title={row.project.name}
+								content={row.modalContent}
+							/>
 						</TableCell>
 					</TableRow>
 				))}

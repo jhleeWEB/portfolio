@@ -55,19 +55,19 @@ export default function DetailInfoModal({
 						<span className='text-lg font-semibold'>목표</span>
 						<ul>
 							{content.objectives.map((n) => (
-								<li>· {n}</li>
+								<li key={n}>· {n}</li>
 							))}
 						</ul>
 						<span className='text-lg font-semibold'>성과</span>
 						<ul>
 							{content.accomplishments.map((n) => (
-								<li>· {n}</li>
+								<li key={n}>· {n}</li>
 							))}
 						</ul>
 						<span className='text-lg font-semibold'>기여</span>
 						<ul>
 							{content.contribution.map((n) => (
-								<li>· {n}</li>
+								<li key={n}>· {n}</li>
 							))}
 						</ul>
 					</ModalBody>

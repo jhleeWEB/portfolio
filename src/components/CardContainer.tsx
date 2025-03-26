@@ -1,5 +1,4 @@
 import { Card, CardBody, CardHeader } from '@heroui/react';
-import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 type Props = {
@@ -10,10 +9,6 @@ type Props = {
 };
 const CardContainer = ({ id = '', title, subTitle, bodyContent }: Props) => {
 	const { ref, inView } = useInView({ threshold: 0, rootMargin: '-100px' });
-
-	useEffect(() => {
-		console.log(inView);
-	}, [inView]);
 
 	return (
 		<Card ref={ref} id={id} className='container py-8 px-4 mb-12'>
