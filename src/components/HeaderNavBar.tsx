@@ -6,6 +6,7 @@ import {
 	Link,
 	Button,
 } from '@heroui/react';
+import DarkModeSwitch from './DarkModeSwitch';
 
 const GithubIcon = ({ filled, size, height, width, ...props }: any) => {
 	return (
@@ -39,6 +40,9 @@ const HeaderNavBar = () => {
 				</NavbarItem>
 			</NavbarContent>
 			<NavbarContent justify='end'>
+				<NavbarItem>
+					<DarkModeSwitch />
+				</NavbarItem>
 				<NavbarItem className='lg:flex'>
 					<Button isIconOnly variant='bordered'>
 						<GithubIcon size={20} />
