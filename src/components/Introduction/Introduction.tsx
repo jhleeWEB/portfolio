@@ -2,6 +2,7 @@ import { styled } from 'styled-components';
 import Landing from './Landing';
 import MyIntro from './MyIntro';
 import MyProjects from './MyProjects';
+import MySkills from './MySkills';
 
 const Wrapper = styled.div(({}) => ({}));
 
@@ -11,6 +12,7 @@ const Introduction = () => {
 			<Landing />
 			<MyIntro />
 			<MyProjects />
+			<MySkills />
 		</Wrapper>
 	);
 };
