@@ -26,7 +26,7 @@ const HeaderNavBar = () => {
 	return (
 		<Navbar shouldHideOnScroll isBordered>
 			<NavbarBrand>
-				<p className='text-lg font-black'>LEE JOONG HOON</p>
+				<p className='text-xl font-black'>LEE JOONG HOON</p>
 			</NavbarBrand>
 			<NavbarContent className='sm:flex gap-8' justify='center'>
 				<NavbarItem>
