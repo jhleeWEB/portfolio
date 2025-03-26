@@ -4,7 +4,9 @@ import Introduction from './components/Introduction/Introduction';
 const App = () => {
 	return (
 		<main
-			className={`text-foreground bg-background flex flex-col items-center justify-center w-full h-full`}
+			className={
+				'font-notosan text-foreground bg-background flex flex-col items-center justify-center w-full h-full'
+			}
 		>
 			<HeaderNavBar />
 			<Introduction />
