@@ -1,5 +1,8 @@
 import HeaderNavBar from './components/HeaderNavBar';
-import Introduction from './components/Introduction/Introduction';
+import MyIntro from './components/cards/MyIntro';
+import MyProjects from './components/cards/MyProjects';
+import MySkills from './components/cards/MySkills';
+import LandingSection from './components/landingSection/LandingSection';
 
 const App = () => {
 	return (
@@ -9,7 +12,12 @@ const App = () => {
 			}
 		>
 			<HeaderNavBar />
-			<Introduction />
+			<div className='container mx-auto py-8 mb-4'>
+				<LandingSection />
+				<MyIntro />
+				<MyProjects />
+				<MySkills />
+			</div>
 		</main>
 	);
 };

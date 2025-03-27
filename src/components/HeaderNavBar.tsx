@@ -6,7 +6,7 @@ import {
 	Link,
 	Button,
 } from '@heroui/react';
-import DarkModeSwitch from './DarkModeSwitch';
+import DarkModeSwitch from './buttons/DarkModeSwitch';
 
 const GithubIcon = ({ filled, size, height, width, ...props }: any) => {
 	return (

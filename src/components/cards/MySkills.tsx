@@ -5,7 +5,7 @@ import {
 	AvatarGroup,
 	Tooltip,
 } from '@heroui/react';
-import CardContainer from '../CardContainer';
+import CardContainer from './CardContainer';
 import jsLogo from '@assets/js.svg';
 import tsLogo from '@assets/ts.svg';
 import htmlLogo from '@assets/html.svg';

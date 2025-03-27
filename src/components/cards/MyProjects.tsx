@@ -1,4 +1,4 @@
-import CardContainer from '../CardContainer';
+import CardContainer from './CardContainer';
 import {
 	Table,
 	TableHeader,
@@ -9,7 +9,7 @@ import {
 	Chip,
 	Link,
 } from '@heroui/react';
-import DetailInfoModal from '../DetailInfoModal';
+import DetailInfoModal from '../modals/DetailInfoModal';
 
 const rows = [
 	{
