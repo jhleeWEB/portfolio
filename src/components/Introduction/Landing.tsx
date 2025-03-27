@@ -4,7 +4,7 @@ import FloatingComponents from './FloatingComponents';
 
 const Landing = () => {
 	return (
-		<Container>
+		<Container style={{ marginBottom: '80px' }}>
 			<Developer />
 			<FloatingComponents />
 		</Container>
