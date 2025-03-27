@@ -169,15 +169,17 @@ const BodyContent = () => {
 				{rows.map((row) => (
 					<TableRow key={row.key}>
 						<TableCell>
-							<h1 className='text-lg font-semibold'>{row.project.name}</h1>
+							<h1 className='text-xl font-semibold mb-[-6px]'>
+								{row.project.name}
+							</h1>
 							{row.project.url !== '-' && (
 								<Link size='sm' href={row.project.url} showAnchorIcon>
-									{row.project.url}
+									<i>{row.project.url}</i>
 								</Link>
 							)}
-							<div className='flex gap-2'>
+							<div className='flex gap-2 mt-1'>
 								{row.project.role.map((n) => (
-									<Chip key={n} size='sm'>
+									<Chip key={n} size='sm' className='rounded-lg'>
 										{n}
 									</Chip>
 								))}

@@ -29,16 +29,16 @@ const BodyContent = () => {
 				startContent={
 					<AvatarGroup isBordered>
 						<Tooltip content='html'>
-							<Avatar radius='lg' src={htmlLogo} />
+							<Avatar className='bg-background' radius='lg' src={htmlLogo} />
 						</Tooltip>
 						<Tooltip content='CSS'>
-							<Avatar radius='lg' src={cssLogo} />
+							<Avatar className='bg-background' radius='lg' src={cssLogo} />
 						</Tooltip>
 						<Tooltip content='Javascript'>
-							<Avatar radius='lg' src={jsLogo} />
+							<Avatar className='bg-background' radius='lg' src={jsLogo} />
 						</Tooltip>
 						<Tooltip content='Typescript'>
-							<Avatar radius='lg' src={tsLogo} />
+							<Avatar className='bg-background' radius='lg' src={tsLogo} />
 						</Tooltip>
 					</AvatarGroup>
 				}
@@ -57,7 +57,7 @@ const BodyContent = () => {
 							<Avatar radius='lg' src={nextLogo} />
 						</Tooltip>
 						<Tooltip content='React.js'>
-							<Avatar radius='lg' src={reactLogo} />
+							<Avatar className='bg-background' radius='lg' src={reactLogo} />
 						</Tooltip>
 					</AvatarGroup>
 				}
@@ -74,10 +74,14 @@ const BodyContent = () => {
 				startContent={
 					<AvatarGroup isBordered>
 						<Tooltip content='SASS/SCSS'>
-							<Avatar radius='lg' src={sassLogo} />
+							<Avatar className='bg-background' radius='lg' src={sassLogo} />
 						</Tooltip>
 						<Tooltip content='TailwindCSS'>
-							<Avatar radius='lg' src={tailwindcssLogo} />
+							<Avatar
+								className='bg-background'
+								radius='lg'
+								src={tailwindcssLogo}
+							/>
 						</Tooltip>
 					</AvatarGroup>
 				}
@@ -93,13 +97,13 @@ const BodyContent = () => {
 				startContent={
 					<AvatarGroup isBordered>
 						<Tooltip content='AWS'>
-							<Avatar radius='lg' src={awsLogo} />
+							<Avatar className='bg-background' radius='lg' src={awsLogo} />
 						</Tooltip>
 						<Tooltip content='AWS/EC2'>
-							<Avatar radius='lg' src={ec2Logo} />
+							<Avatar className='bg-background' radius='lg' src={ec2Logo} />
 						</Tooltip>
 						<Tooltip content='Docker'>
-							<Avatar radius='lg' src={dockerLogo} />
+							<Avatar className='bg-background' radius='lg' src={dockerLogo} />
 						</Tooltip>
 					</AvatarGroup>
 				}

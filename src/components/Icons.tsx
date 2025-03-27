@@ -20,7 +20,7 @@ export const DocumentTextIcon = ({
 			height={size || height || 24}
 			viewBox='0 0 24 24'
 			width={size || width || 24}
-			strokeWidth='1.5'
+			strokeWidth='2'
 			stroke='currentColor'
 			className='size-6'
 			{...props}

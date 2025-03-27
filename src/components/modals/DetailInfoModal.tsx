@@ -27,7 +27,7 @@ export default function DetailInfoModal({
 
 	return (
 		<>
-			<Button onPress={onOpen} isIconOnly>
+			<Button className='bg-background' onPress={onOpen} isIconOnly>
 				<DocumentTextIcon />
 			</Button>
 			<Modal
