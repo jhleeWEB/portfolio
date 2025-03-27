@@ -11,17 +11,23 @@ const CardContainer = ({ id = '', title, subTitle, bodyContent }: Props) => {
 	const { ref, inView } = useInView({ threshold: 0, rootMargin: '-100px' });
 
 	return (
-		<Card ref={ref} id={id} className='container py-8 px-4 mb-12'>
+		<Card ref={ref} id={id} className='container p-6 mb-12'>
 			<div
-				className={`opacity 0.6s ease-in-out, top 0.6s ease-in-out duration-700 ${
-					inView ? 'opacity-100' : 'opacity-0'
-				}`}
+				style={{
+					position: 'relative',
+					opacity: inView ? 1 : 0.2,
+					transition: 'opacity 0.6s ease-in-out, top 0.6s ease-in-out',
+					transitionDelay: '0.1s',
+					top: inView ? '0px' : '50px',
+				}}
 			>
-				<CardHeader className='pb-0 pt-2 px-4 flex-col items-start'>
-					<h4 className='font-bold text-large'>{title}</h4>
-					<p className='text-tiny uppercase font-bold'>{subTitle}</p>
+				<CardHeader className='flex-col items-start'>
+					<h1 className='mb-2 text-3xl font-extrabold leading-none tracking-tight dark:text-white underline underline-offset-4 decoration-4 decoration-blue-400 dark:decoration-blue-600'>
+						{title}
+					</h1>
+					<p className='font-semibold'>{subTitle}</p>
 				</CardHeader>
-				<CardBody className='overflow-visible gap-4 '>{bodyContent}</CardBody>
+				<CardBody className='overflow-visible gap-4'>{bodyContent}</CardBody>
 			</div>
 		</Card>
 	);
