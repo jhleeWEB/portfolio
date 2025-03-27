@@ -2,7 +2,7 @@ import Container from '../Container';
 import Developer from './Developer';
 import FloatingComponents from './FloatingComponents';
 
-const Landing = () => {
+const LandingSection = () => {
 	return (
 		<Container style={{ marginBottom: '80px' }}>
 			<Developer />
@@ -11,4 +11,4 @@ const Landing = () => {
 	);
 };
 
-export default Landing;
+export default LandingSection;

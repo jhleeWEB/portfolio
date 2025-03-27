@@ -1,6 +1,6 @@
 import { Switch } from '@heroui/react';
 import { useTheme } from '@heroui/use-theme';
-import { MoonIcon, SunIcon } from './Icons';
+import { MoonIcon, SunIcon } from '../Icons';
 
 export default function DarkModeSwitch() {
 	const { theme, setTheme } = useTheme();

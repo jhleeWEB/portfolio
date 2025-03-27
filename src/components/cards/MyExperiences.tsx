@@ -1,4 +1,4 @@
-import CardContainer from '../CardContainer';
+import CardContainer from './CardContainer';
 import {
 	Table,
 	TableHeader,

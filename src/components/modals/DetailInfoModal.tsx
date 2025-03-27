@@ -7,7 +7,7 @@ import {
 	Button,
 	useDisclosure,
 } from '@heroui/react';
-import { DocumentTextIcon } from './Icons';
+import { DocumentTextIcon } from '../Icons';
 
 type Props = {
 	title?: string;
