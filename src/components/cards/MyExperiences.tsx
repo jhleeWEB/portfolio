@@ -6,11 +6,10 @@ import {
 	TableBody,
 	TableRow,
 	TableCell,
-	Button,
 	Link,
 } from '@heroui/react';
-import { DocumentTextIcon } from '../Icons';
 import CustomChip from '../chips/Chip';
+import DetailInfoModal from '../modals/DetailInfoModal';
 
 const rows = [
 	{
@@ -27,25 +26,30 @@ const rows = [
 			'LB Developer 애플리케이션 어드민/사용자 페이지 개발',
 			'사용자 분석을 위해 사용자 행동 추척 툴 삽입 및 관리',
 		],
-		retrospects: {
-			video: [],
-			lessons: ['기술선택', '유료 보고서를 통해 고도화된 정보와 가격추정 제공'],
-			accomplishments: [
-				'유료 보고서 서비스 런칭',
-				'편리한 지도 클릭 컴포넌트 개발',
-				'시각적으로 확인 가능한 3D랜더링 모듈 개발',
-			],
-			contributions: [
-				'프론트엔드 지도 및 3D랜더링 부분 담당',
-				'CI/CD 스크립트 및 기타 인프라 관리',
-				'초기 설계 담당',
-				'수많은 컴포넌트 개발',
-			],
-		},
+		contributionModalContent: [
+			{
+				title: 'What I learned',
+				list: [
+					'개발 파이프라인을 체계화하면서 다양한 툴을 활용해 다른 팀과 협업하는 방법',
+					'회사 사이드 프로젝트를 담당하면서 기술 선택에 대한 고민',
+					'백엔드 개발자와 밀첩하게 작업하면서 배운 다양한 지식들',
+					'꾸준히 노력하지 않으면 도태된다는 점',
+				],
+			},
+			{
+				title: 'What I regret',
+				list: [
+					'제한된 리소스, 짧은 개발시간 등등으로 너무 보수적으로 기술을 선택하여, 신기술을 메인 프로젝트에 많이 적용하지 못했다는점',
+					'CI/CD 파이프라인을 조금 더 일찍 구축하지 못했다는 점',
+					'테스트 커버리지의 부족 및 예외처리',
+					'익숙한 기술을 사용했던 고집',
+				],
+			},
+		],
 		services: [
 			{
-				name: 'Landbook',
-				objectives: [
+				title: 'Landbook',
+				list: [
 					'AI 자동설계를 통해 토지가치평가를 보다 빠르고 정확한 정보를 제공',
 				],
 				links: {
@@ -54,8 +58,8 @@ const rows = [
 				},
 			},
 			{
-				name: 'LB Developer',
-				objectives: [
+				title: 'LB Developer',
+				list: [
 					'문서로 진행하던 가로주택정비사업 검토방식을 온라인으로 제공',
 					'빠른 자동설계를 통해 정확한 사업성 분석 제공',
 				],
@@ -102,14 +106,16 @@ const BodyContent = () => {
 							</ul>
 						</TableCell>
 						<TableCell>
-							<Button isIconOnly>
-								<DocumentTextIcon />
-							</Button>
+							<DetailInfoModal
+								title={row.experience.company}
+								content={row.contributionModalContent}
+							/>
 						</TableCell>
 						<TableCell>
-							<Button isIconOnly>
-								<DocumentTextIcon />
-							</Button>
+							<DetailInfoModal
+								title={row.experience.company}
+								content={row.services}
+							/>
 						</TableCell>
 					</TableRow>
 				))}
