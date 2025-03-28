@@ -11,16 +11,16 @@ import { DocumentTextIcon } from '../Icons';
 
 type Props = {
 	title?: string;
+	src?: string;
 	content: {
-		src?: string;
-		objectives: string[];
-		contribution: string[];
-		accomplishments: string[];
-	};
+		title: string;
+		list: string[];
+	}[];
 };
 
 export default function DetailInfoModal({
 	title = 'Modal Title',
+	src,
 	content,
 }: Props) {
 	const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -42,34 +42,26 @@ export default function DetailInfoModal({
 						{title}
 					</ModalHeader>
 					<ModalBody>
-						{content.src && (
+						{src && (
 							<iframe
 								className='rounded-large'
-								src={content.src}
+								src={src}
 								allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
 								allowFullScreen
 								title='video'
 								height='225'
 							/>
 						)}
-						<span className='text-lg font-semibold'>목표</span>
-						<ul>
-							{content.objectives.map((n) => (
-								<li key={n}>· {n}</li>
-							))}
-						</ul>
-						<span className='text-lg font-semibold'>성과</span>
-						<ul>
-							{content.accomplishments.map((n) => (
-								<li key={n}>· {n}</li>
-							))}
-						</ul>
-						<span className='text-lg font-semibold'>기여</span>
-						<ul>
-							{content.contribution.map((n) => (
-								<li key={n}>· {n}</li>
-							))}
-						</ul>
+						{content.map((n) => (
+							<>
+								<span className='text-lg font-semibold'>{n.title}</span>
+								<ul>
+									{n.list.map((n) => (
+										<li key={n}>· {n}</li>
+									))}
+								</ul>
+							</>
+						))}
 					</ModalBody>
 					<ModalFooter></ModalFooter>
 				</ModalContent>

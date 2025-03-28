@@ -120,6 +120,7 @@ const BodyContent = () => {
 const MyExperiences = () => {
 	return (
 		<CardContainer
+			id='experiences'
 			title='Experiences'
 			subTitle='실패를 통해 배우고, 배움을 통해 성장해갑니다'
 			bodyContent={<BodyContent />}
