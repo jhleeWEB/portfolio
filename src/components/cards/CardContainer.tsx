@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 type Props = {
 	id?: string;
 	title: string;
-	subTitle: string;
+	subTitle?: string;
 	bodyContent: React.ReactElement;
 };
 const CardContainer = ({ id = '', title, subTitle, bodyContent }: Props) => {
@@ -27,7 +27,9 @@ const CardContainer = ({ id = '', title, subTitle, bodyContent }: Props) => {
 					</h1>
 					<p className='font-semibold'>{subTitle}</p>
 				</CardHeader>
-				<CardBody className='overflow-visible gap-4'>{bodyContent}</CardBody>
+				<CardBody className='overflow-visible gap-4 items-center'>
+					{bodyContent}
+				</CardBody>
 			</div>
 		</Card>
 	);

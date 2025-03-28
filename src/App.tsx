@@ -1,4 +1,5 @@
 import HeaderNavBar from './components/HeaderNavBar';
+import MyContact from './components/cards/MyContact';
 import MyIntro from './components/cards/MyIntro';
 import MyProjects from './components/cards/MyProjects';
 import MySkills from './components/cards/MySkills';
@@ -17,6 +18,7 @@ const App = () => {
 				<MyIntro />
 				<MyProjects />
 				<MySkills />
+				<MyContact />
 			</div>
 		</main>
 	);
