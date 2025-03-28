@@ -49,6 +49,12 @@ const rows = [
 					'랜드북에 코어 기능인 지도 인터렉션 부분 개발',
 				],
 			},
+			{
+				title: '사용기술',
+				list: [
+					'Next.js, React, Three.js, Typescript, Redux, Redux-Toolkit, React-Query, Styled-Components, React-Hook-Form, Jest, Storybook, Github',
+				],
+			},
 		],
 	},
 	{
@@ -87,6 +93,12 @@ const rows = [
 					'React-Query 캐싱을 활용해 api요청 최적화',
 				],
 			},
+			{
+				title: '사용기술',
+				list: [
+					'Next.js, React, Three.js, Typescript, Redux, Redux-Toolkit, React-Query, Styled-Components, React-Hook-Form, Github',
+				],
+			},
 		],
 	},
 	{
@@ -122,6 +134,10 @@ const rows = [
 					'랜드북에 코어 기능인 지도 인터렉션 부분 개발',
 				],
 			},
+			{
+				title: '사용기술',
+				list: ['Next.js, React, Typescript, Redux, SCSS, Github'],
+			},
 		],
 	},
 	{
@@ -156,6 +172,10 @@ const rows = [
 					'랜드북에 코어 기능인 지도 인터렉션 부분 개발',
 				],
 			},
+			{
+				title: '사용기술',
+				list: ['Unity, c#'],
+			},
 		],
 	},
 	{
@@ -189,6 +209,10 @@ const rows = [
 					'유료 보고서에 핵심 기능인 3D랜더링 모듈 개발',
 					'랜드북에 코어 기능인 지도 인터렉션 부분 개발',
 				],
+			},
+			{
+				title: '사용기술',
+				list: ['Rhino6, c#'],
 			},
 		],
 	},

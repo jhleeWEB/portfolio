@@ -55,7 +55,7 @@ export default function DetailInfoModal({
 						)}
 						{content.map((n) => (
 							<>
-								<span className='text-lg font-semibold mb-[-12px] underline underline-offset-2 decoration-4 decoration-blue-400'>
+								<span className='uppercase text-lg font-semibold mb-[-12px] underline underline-offset-2 decoration-4 decoration-blue-400'>
 									{n.title}
 								</span>
 								<ul>
