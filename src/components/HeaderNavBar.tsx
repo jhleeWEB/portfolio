@@ -35,6 +35,11 @@ const HeaderNavBar = () => {
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
+					<Link color='foreground' href='#experiences' className='text-lg'>
+						Experiences
+					</Link>
+				</NavbarItem>
+				<NavbarItem>
 					<Link color='foreground' href='#projects' className='text-lg'>
 						Projects
 					</Link>
