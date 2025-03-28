@@ -6,11 +6,11 @@ import {
 	TableBody,
 	TableRow,
 	TableCell,
-	Chip,
 	Button,
 	Link,
 } from '@heroui/react';
 import { DocumentTextIcon } from '../Icons';
+import CustomChip from '../chips/Chip';
 
 const rows = [
 	{
@@ -81,15 +81,15 @@ const BodyContent = () => {
 				{rows.map((row) => (
 					<TableRow key={row.key}>
 						<TableCell>
-							<h1 className='text-lg font-semibold'>
+							<h1 className='text-xl font-semibold mb-[-6px]'>
 								{row.experience.company}
 							</h1>
 							<Link size='sm' href={row.link} showAnchorIcon>
 								<i>{row.link}</i>
 							</Link>
-							<div className='flex gap-2'>
+							<div className='flex gap-2 mt-1'>
 								{row.experience.role.map((n) => (
-									<Chip size='sm'>{n}</Chip>
+									<CustomChip key={n} content={n} />
 								))}
 							</div>
 							<small>{row.duration}</small>

@@ -6,10 +6,10 @@ import {
 	TableBody,
 	TableRow,
 	TableCell,
-	Chip,
 	Link,
 } from '@heroui/react';
 import DetailInfoModal from '../modals/DetailInfoModal';
+import CustomChip from '../chips/Chip';
 
 const rows = [
 	{
@@ -179,9 +179,7 @@ const BodyContent = () => {
 							)}
 							<div className='flex gap-2 mt-1'>
 								{row.project.role.map((n) => (
-									<Chip key={n} size='sm' className='rounded-lg'>
-										{n}
-									</Chip>
+									<CustomChip key={n} content={n} />
 								))}
 							</div>
 							<small>{row.project.duration}</small>
