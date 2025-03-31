@@ -1,3 +1,4 @@
+const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
@@ -53,6 +54,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: './public/index.html',
 		}),
+		new CopyPlugin([{ from: './public/sitemap.xml', to: '' }]),
 	],
 	target: ['web', 'es5'],
 };
