@@ -8,11 +8,7 @@ import LandingSection from './components/landingSection/LandingSection';
 
 const App = () => {
 	return (
-		<main
-			className={
-				'font-notosan text-foreground bg-background flex flex-col items-center justify-center w-full h-full'
-			}
-		>
+		<main className={'font-notosan text-foreground bg-background'}>
 			<HeaderNavBar />
 			<div className='container mx-auto py-8 mb-4'>
 				<LandingSection />

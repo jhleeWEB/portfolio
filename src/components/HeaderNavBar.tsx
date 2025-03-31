@@ -3,10 +3,14 @@ import {
 	NavbarBrand,
 	NavbarContent,
 	NavbarItem,
+	// NavbarMenu,
+	// NavbarMenuItem,
+	// NavbarMenuToggle,
 	Link,
 	Button,
 } from '@heroui/react';
 import DarkModeSwitch from './buttons/DarkModeSwitch';
+// import { useEffect, useState } from 'react';
 
 const GithubIcon = ({ filled, size, height, width, ...props }: any) => {
 	return (
@@ -23,12 +27,24 @@ const GithubIcon = ({ filled, size, height, width, ...props }: any) => {
 };
 
 const HeaderNavBar = () => {
+	// const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 	return (
-		<Navbar shouldHideOnScroll isBordered>
+		<Navbar
+			shouldHideOnScroll
+			isBordered
+			// isMenuOpen={isMenuOpen}
+			// onMenuOpenChange={setIsMenuOpen}
+		>
+			{/* <NavbarMenuToggle
+				aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+				className='sm:hidden'
+			/> */}
 			<NavbarBrand>
-				<p className='text-xl font-black'>LEE JOONG HOON</p>
+				<p className='hidden sm:flex text-xl font-black'>LEE JOONG HOON</p>
+				<p className='hidden max-sm:flex text-xl font-black'>JHLEE</p>
 			</NavbarBrand>
-			<NavbarContent className='sm:flex gap-8' justify='center'>
+			<NavbarContent className='hidden sm:flex gap-8' justify='center'>
 				<NavbarItem>
 					<Link color='foreground' href='#introduction' className='text-lg'>
 						Introduction
@@ -49,6 +65,11 @@ const HeaderNavBar = () => {
 						Skills
 					</Link>
 				</NavbarItem>
+				<NavbarItem>
+					<Link color='foreground' href='#contacts' className='text-lg'>
+						Contacts
+					</Link>
+				</NavbarItem>
 			</NavbarContent>
 			<NavbarContent justify='end'>
 				<NavbarItem>
@@ -60,6 +81,49 @@ const HeaderNavBar = () => {
 					</Button>
 				</NavbarItem>
 			</NavbarContent>
+			{/* <NavbarMenu>
+				<NavbarMenuItem onClick={() => setIsMenuOpen(false)}>
+					<Link
+						color='foreground'
+						href='#introduction'
+						className='text-lg uppercase'
+					>
+						Introduction
+					</Link>
+				</NavbarMenuItem>
+				<NavbarMenuItem onClick={() => setIsMenuOpen(false)}>
+					<Link
+						color='foreground'
+						href='#experiences'
+						className='text-lg uppercase'
+					>
+						Experiences
+					</Link>
+				</NavbarMenuItem>
+				<NavbarMenuItem onClick={() => setIsMenuOpen(false)}>
+					<Link
+						color='foreground'
+						href='#projects'
+						className='text-lg uppercase'
+					>
+						Projects
+					</Link>
+				</NavbarMenuItem>
+				<NavbarMenuItem onClick={() => setIsMenuOpen(false)}>
+					<Link color='foreground' href='#skills' className='text-lg uppercase'>
+						Skills
+					</Link>
+				</NavbarMenuItem>
+				<NavbarMenuItem onClick={() => setIsMenuOpen(false)}>
+					<Link
+						color='foreground'
+						href='#contacts'
+						className='text-lg uppercase'
+					>
+						Contacts
+					</Link>
+				</NavbarMenuItem>
+			</NavbarMenu> */}
 		</Navbar>
 	);
 };
