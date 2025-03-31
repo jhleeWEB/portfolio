@@ -54,7 +54,10 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: './public/index.html',
 		}),
-		new CopyPlugin([{ from: './public/sitemap.xml', to: '' }]),
+		new CopyPlugin([
+			{ from: './public/sitemap.xml', to: '' },
+			{ from: './public/robots.txt', to: '' },
+		]),
 	],
 	target: ['web', 'es5'],
 };
