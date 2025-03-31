@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jhleeweb.github.io/portfolio/sitemap.xml
