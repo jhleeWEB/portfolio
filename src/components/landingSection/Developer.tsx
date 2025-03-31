@@ -7,7 +7,7 @@ const Developer = () => {
 			<Avatar src={fryLogo} className='w-64 h-64 mb-10' />
 			<div className='px-4'>
 				<div className='text-2xl font-semibold'>
-					매일 봄같은 개발자,
+					뚝딱뚝딱 만들어내는 개발자,
 					<span className='text-blue-500'>이중훈</span>
 					입니다
 				</div>
