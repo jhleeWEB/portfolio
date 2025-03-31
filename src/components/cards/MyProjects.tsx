@@ -239,8 +239,8 @@ const BodyContent = () => {
 								</Link>
 							)}
 							<div className='flex gap-2 mt-1'>
-								{row.project.role.map((n) => (
-									<CustomChip key={n} content={n} />
+								{row.project.role.map((n, i) => (
+									<CustomChip key={n + i} content={n} />
 								))}
 							</div>
 							<small>{row.project.duration}</small>

@@ -92,8 +92,8 @@ const BodyContent = () => {
 								<i>{row.link}</i>
 							</Link>
 							<div className='flex gap-2 mt-1'>
-								{row.experience.role.map((n) => (
-									<CustomChip key={n} content={n} />
+								{row.experience.role.map((n, i) => (
+									<CustomChip key={n + i} content={n} />
 								))}
 							</div>
 							<small>{row.duration}</small>
@@ -101,7 +101,9 @@ const BodyContent = () => {
 						<TableCell>
 							<ul>
 								{row.assignments.map((n) => (
-									<li className='flex'>· {n}</li>
+									<li key={n} className='flex'>
+										· {n}
+									</li>
 								))}
 							</ul>
 						</TableCell>

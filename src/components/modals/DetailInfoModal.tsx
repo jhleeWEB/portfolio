@@ -54,7 +54,7 @@ export default function DetailInfoModal({
 							/>
 						)}
 						{content.map((n) => (
-							<>
+							<section key={n.title}>
 								<span className='uppercase text-lg font-semibold mb-[-12px] underline underline-offset-2 decoration-4 decoration-blue-400'>
 									{n.title}
 								</span>
@@ -85,7 +85,7 @@ export default function DetailInfoModal({
 										</Button>
 									</section>
 								)}
-							</>
+							</section>
 						))}
 					</ModalBody>
 				</ModalContent>
