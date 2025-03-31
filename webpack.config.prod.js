@@ -57,6 +57,7 @@ module.exports = {
 		new CopyPlugin([
 			{ from: './public/sitemap.xml', to: '' },
 			{ from: './public/robots.txt', to: '' },
+			{ from: './public/google7e7833f1ba82cd0d.html', to: '' },
 		]),
 	],
 	target: ['web', 'es5'],
