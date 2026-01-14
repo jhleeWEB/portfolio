@@ -18,6 +18,10 @@ const BodyContent = () => {
 };
 export default function MyContact() {
 	return (
-		<CardContainer id='contact' title='Contact' bodyContent={<BodyContent />} />
+		<CardContainer
+			id='contacts'
+			title='Contact'
+			bodyContent={<BodyContent />}
+		/>
 	);
 }

@@ -39,12 +39,12 @@ module.exports = {
 	resolve: {
 		extensions: ['.js', '.jsx', '.tsx', '.ts'],
 		alias: {
-			'@components': path.resolve(__dirname, 'src/components'),
-			'@assets': path.resolve(__dirname, 'src/assets'),
-			'@styles': path.resolve(__dirname, 'src/styles'),
+			'@components': path.resolve(__dirname, 'src/components/'),
+			'@assets': path.resolve(__dirname, 'src/assets/'),
+			'@styles': path.resolve(__dirname, 'src/styles/'),
 			'@src': path.resolve(__dirname, 'src/'),
-			'@hooks': path.resolve(__dirname, 'src/hooks'),
-			'@consts': path.resolve(__dirname, 'src/consts'),
+			'@hooks': path.resolve(__dirname, 'src/hooks/'),
+			'@consts': path.resolve(__dirname, 'src/consts/'),
 		},
 	},
 	plugins: [

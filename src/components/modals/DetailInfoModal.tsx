@@ -7,7 +7,8 @@ import {
 	useDisclosure,
 	Link,
 } from '@heroui/react';
-import { DocumentTextIcon } from '../Icons';
+import { DetailDocIcon, DocumentTextIcon } from '../Icons';
+import useDevice from '../hooks/useDevice';
 
 type Props = {
 	title?: string;
@@ -25,11 +26,15 @@ export default function DetailInfoModal({
 	content,
 }: Props) {
 	const { isOpen, onOpen, onOpenChange } = useDisclosure();
-
+	const isMobile = useDevice();
 	return (
 		<>
 			<Button className='bg-background' onPress={onOpen} isIconOnly>
-				<DocumentTextIcon />
+				{isMobile ? (
+					<DetailDocIcon className='size-12 stroke-slate-500' />
+				) : (
+					<DocumentTextIcon />
+				)}
 			</Button>
 			<Modal
 				backdrop='blur'

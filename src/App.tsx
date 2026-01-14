@@ -1,6 +1,6 @@
 import HeaderNavBar from './components/HeaderNavBar';
 import MyContact from './components/cards/MyContact';
-import MyExperiences from './components/cards/MyExperiences';
+import MyExperiences from './components/cards/myExperiences/MyExperiences';
 import MyIntro from './components/cards/MyIntro';
 import MyProjects from './components/cards/MyProjects';
 import MySkills from './components/cards/MySkills';
