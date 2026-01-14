@@ -1,0 +1,22 @@
+{
+	"React Functional Component": {
+		"prefix": "rfc",
+		"body": [
+			"import { styled } from \"styled-components\"",
+			"",
+			"const Wrapper = styled.div(({}) => ({}))",
+			"",
+			"const ${TM_FILENAME_BASE} = () => {",
+			"  return (",
+			"    <Wrapper>",
+			"      $2",
+			"    </Wrapper>",
+			"  )",
+			"};",
+			"",
+			"export default ${TM_FILENAME_BASE};",
+			""
+		],
+		"description": "React Functional Component"
+	}
+}
