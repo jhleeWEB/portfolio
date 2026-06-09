@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { Card, CardBody, CardHeader } from '@heroui/react';
 import CardContainer from './CardContainer';
 

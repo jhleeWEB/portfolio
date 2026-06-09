@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Container from '../Container';
 import Developer from './Developer';
 import FloatingComponents from './FloatingComponents';

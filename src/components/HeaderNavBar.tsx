@@ -1,4 +1,5 @@
-'use client'
+'use client';
+
 import {
 	Navbar,
 	NavbarBrand,
@@ -9,7 +10,13 @@ import {
 } from '@heroui/react';
 import DarkModeSwitch from './buttons/DarkModeSwitch';
 
-const GithubIcon = ({ filled, size, height, width, ...props }: any) => {
+type GithubIconProps = React.SVGProps<SVGSVGElement> & {
+	size?: number;
+	height?: number;
+	width?: number;
+};
+
+const GithubIcon = ({ size, height, width, ...props }: GithubIconProps) => {
 	return (
 		<svg
 			height={size || height || 24}

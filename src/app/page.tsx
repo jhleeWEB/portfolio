@@ -6,7 +6,7 @@ import MySkills from '../components/cards/MySkills';
 import HeaderNavBar from '../components/HeaderNavBar';
 import LandingSection from '../components/landingSection/LandingSection';
 
-export default async function Page() {
+export default function Page() {
 	return (
 		<main
 			className={
@@ -23,5 +23,5 @@ export default async function Page() {
 				<MyContact />
 			</div>
 		</main>
-	)
+	);
 }
