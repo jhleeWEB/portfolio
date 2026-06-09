@@ -1,3 +1,4 @@
+'use client'
 import { Switch } from '@heroui/react';
 import { useTheme } from '@heroui/use-theme';
 import { MoonIcon, SunIcon } from '../Icons';

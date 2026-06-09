@@ -1,3 +1,4 @@
+'use client'
 import CardContainer from './CardContainer';
 import {
 	Table,
