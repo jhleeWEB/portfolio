@@ -1,3 +1,5 @@
+'use client';
+
 import HeaderNavBar from './components/HeaderNavBar';
 import MyContact from './components/cards/MyContact';
 import MyExperiences from './components/cards/MyExperiences';

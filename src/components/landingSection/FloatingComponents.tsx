@@ -14,17 +14,17 @@ const FloatingComponents = () => {
 				<Samples.Sample5 />
 				<Samples.Sample2 />
 				<div className='flex'>
-					<Image className='animate-float' src={tsLogo} />
-					<Image className='animate-float-fast' src={jsLogo} />
+					<Image className='animate-float' src={tsLogo.src} />
+					<Image className='animate-float-fast' src={jsLogo.src} />
 				</div>
 				<Samples.Sample1 />
 				<Samples.Sample3 />
 				<div className='flex'>
-					<Image className='animate-float-fast' src={sassLogo} />
-					<Image className='animate-float-fast' src={cssLogo} />
-					<Image className='animate-float-slow' src={figmaLogo} />
+					<Image className='animate-float-fast' src={sassLogo.src} />
+					<Image className='animate-float-fast' src={cssLogo.src} />
+					<Image className='animate-float-slow' src={figmaLogo.src} />
 				</div>
-				<Image src={reactLogo} className='animate-float-fast' />
+				<Image src={reactLogo.src} className='animate-float-fast' />
 				<Samples.Sample4 />
 			</div>
 		</div>

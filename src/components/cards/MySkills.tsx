@@ -29,16 +29,16 @@ const BodyContent = () => {
 				startContent={
 					<AvatarGroup isBordered>
 						<Tooltip content='html'>
-							<Avatar className='bg-background' radius='lg' src={htmlLogo} />
+							<Avatar className='bg-background' radius='lg' src={htmlLogo.src} />
 						</Tooltip>
 						<Tooltip content='CSS'>
-							<Avatar className='bg-background' radius='lg' src={cssLogo} />
+							<Avatar className='bg-background' radius='lg' src={cssLogo.src} />
 						</Tooltip>
 						<Tooltip content='Javascript'>
-							<Avatar className='bg-background' radius='lg' src={jsLogo} />
+							<Avatar className='bg-background' radius='lg' src={jsLogo.src} />
 						</Tooltip>
 						<Tooltip content='Typescript'>
-							<Avatar className='bg-background' radius='lg' src={tsLogo} />
+							<Avatar className='bg-background' radius='lg' src={tsLogo.src} />
 						</Tooltip>
 					</AvatarGroup>
 				}
@@ -54,10 +54,10 @@ const BodyContent = () => {
 				startContent={
 					<AvatarGroup isBordered>
 						<Tooltip content='Next.js'>
-							<Avatar radius='lg' src={nextLogo} />
+							<Avatar radius='lg' src={nextLogo.src} />
 						</Tooltip>
 						<Tooltip content='React.js'>
-							<Avatar className='bg-background' radius='lg' src={reactLogo} />
+							<Avatar className='bg-background' radius='lg' src={reactLogo.src} />
 						</Tooltip>
 					</AvatarGroup>
 				}
@@ -74,13 +74,13 @@ const BodyContent = () => {
 				startContent={
 					<AvatarGroup isBordered>
 						<Tooltip content='SASS/SCSS'>
-							<Avatar className='bg-background' radius='lg' src={sassLogo} />
+							<Avatar className='bg-background' radius='lg' src={sassLogo.src} />
 						</Tooltip>
 						<Tooltip content='TailwindCSS'>
 							<Avatar
 								className='bg-background'
 								radius='lg'
-								src={tailwindcssLogo}
+								src={tailwindcssLogo.src}
 							/>
 						</Tooltip>
 					</AvatarGroup>
@@ -97,13 +97,13 @@ const BodyContent = () => {
 				startContent={
 					<AvatarGroup isBordered>
 						<Tooltip content='AWS'>
-							<Avatar className='bg-background' radius='lg' src={awsLogo} />
+							<Avatar className='bg-background' radius='lg' src={awsLogo.src} />
 						</Tooltip>
 						<Tooltip content='AWS/EC2'>
-							<Avatar className='bg-background' radius='lg' src={ec2Logo} />
+							<Avatar className='bg-background' radius='lg' src={ec2Logo.src} />
 						</Tooltip>
 						<Tooltip content='Docker'>
-							<Avatar className='bg-background' radius='lg' src={dockerLogo} />
+							<Avatar className='bg-background' radius='lg' src={dockerLogo.src} />
 						</Tooltip>
 					</AvatarGroup>
 				}
