@@ -1,0 +1,35 @@
+.page { max-width: 1000px; margin: 0 auto; padding: 60px 42px 100px; color: #17201a; background: #fff; }
+.header { display:flex; justify-content:space-between; gap:30px; padding-bottom:30px; border-bottom:3px solid #17201a; }
+.header p { color:#286348; font-size:11px; font-weight:900; }
+.header h1 { margin-top:8px; font-size:64px; line-height:1; }
+.header a { display:inline-block; margin-top:14px; font-weight:800; border-bottom:1px solid currentColor; }
+.header nav { display:flex; gap:16px; align-items:flex-start; font-size:12px; }
+.page section { padding:34px 0; border-bottom:1px solid #c5cec6; }
+.page h2 { margin-bottom:22px; color:#286348; font-size:14px; text-transform:uppercase; }
+.summary p { max-width:850px; font-size:17px; line-height:1.8; }
+.skillGrid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+.skillGrid div { padding:16px; background:#f1f4ef; }
+.skillGrid p { margin-top:7px; color:#536057; font-size:13px; line-height:1.55; }
+.stack,.scope { display:flex; flex-wrap:wrap; gap:6px; margin-top:18px; }
+.stack span,.scope span { padding:6px 9px; border:1px solid #aeb9af; font-size:10px; font-weight:800; }
+.experience { display:grid; grid-template-columns:.65fr 1.35fr; gap:40px; }
+.experience h3 { font-size:24px; }
+.experience small,.experience > p { color:#536057; line-height:1.65; }
+.experience small { display:block; margin-top:8px; }
+.project { padding:24px 0; border-top:1px solid #c5cec6; }
+.project header { display:flex; justify-content:space-between; gap:30px; }
+.project header p { color:#e65b37; font:900 10px monospace; }
+.project h3 { margin-top:5px; font-size:24px; }
+.project header > div:last-child { text-align:right; }
+.project header span { display:block; margin-top:5px; color:#68746c; font-size:11px; }
+.project ul { margin:18px 0 0 18px; }
+.project li { margin-top:8px; line-height:1.55; }
+.result { margin-top:18px; padding:12px; border-left:4px solid #e65b37; background:#fff2eb; }
+.result b { color:#e65b37; margin-right:8px; }
+.note { margin-top:15px; color:#778179; font-size:10px; }
+.earlyProjects { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
+.earlyProjects div { padding:18px; border:1px solid #c5cec6; }
+.earlyProjects span { display:block; margin-top:6px; color:#68746c; font-size:11px; }
+.earlyProjects p { margin-top:12px; color:#536057; line-height:1.55; }
+@media(max-width:700px){.page{padding:35px 20px 70px}.header,.project header{flex-direction:column}.header h1{font-size:50px}.skillGrid,.experience,.earlyProjects{grid-template-columns:1fr}.project header>div:last-child{text-align:left}}
+@media print{.page{padding:0}.header nav{display:none}.page section{break-inside:avoid}.project{break-inside:avoid}}

@@ -57,6 +57,16 @@ const HeaderNavBar = () => {
 						Skills
 					</Link>
 				</NavbarItem>
+				<NavbarItem>
+					<Link color='foreground' href='/slides' className='text-lg'>
+						Slides
+					</Link>
+				</NavbarItem>
+				<NavbarItem>
+					<Link color='foreground' href='/resume' className='text-lg'>
+						Resume
+					</Link>
+				</NavbarItem>
 			</NavbarContent>
 			<NavbarContent justify='end'>
 				<NavbarItem>
