@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { landbook, lbDeveloper, primarySkills, profile } from '../../data/portfolio';
+import PrintPdfButton from './PrintPdfButton';
 import styles from './slides.module.css';
 
 export const metadata: Metadata = {
@@ -28,7 +29,7 @@ const Stack = ({ items }: { items: string[] }) => (
 
 const ProductImage = ({ id, alt }: { id: string; alt: string }) => (
 	<div className={styles.productImage}>
-		<img src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`} alt={alt} />
+		<img src={`/api/youtube-thumbnail?id=${id}`} alt={alt} />
 		<span>PRODUCT DEMO</span>
 	</div>
 );
@@ -36,6 +37,7 @@ const ProductImage = ({ id, alt }: { id: string; alt: string }) => (
 export default function SlidesPage() {
 	return (
 		<main className={styles.deck}>
+			<PrintPdfButton />
 			<header className={styles.navigation}>
 				<a className={styles.identity} href='#profile'><span>JH</span><strong>Frontend Portfolio</strong></a>
 				<nav aria-label='슬라이드 바로가기'>
@@ -44,7 +46,7 @@ export default function SlidesPage() {
 				<a className={styles.resumeLink} href='/resume'>Resume</a>
 			</header>
 
-			<section className={`${styles.slide} ${styles.profile}`} id='profile'>
+			<section className={`${styles.slide} ${styles.profile}`} data-pdf-slide id='profile'>
 				<SlideNumber>01</SlideNumber>
 				<div>
 					<p className={styles.eyebrow}>Frontend Developer · {profile.experience}</p>
@@ -59,19 +61,23 @@ export default function SlidesPage() {
 				</div>
 			</section>
 
-			<section className={`${styles.slide} ${styles.project}`} id='landbook'>
+			<section className={`${styles.slide} ${styles.project}`} data-pdf-slide id='landbook'>
 				<SlideNumber>02</SlideNumber>
 				<div className={styles.projectCopy}>
 					<p className={styles.eyebrow}>PROJECT 01 · {landbook.period}</p>
 					<h2>{landbook.name}<br /><span>{landbook.title}</span></h2>
 					<p className={styles.lead}>건축 조건 입력부터 지도·3D 분석, 최종 보고서까지 이어지는 토지 가치평가 제품입니다.</p>
-					<div className={styles.verifiedResult}><small>검증된 사업 결과</small><strong>{landbook.verifiedResult}</strong></div>
+					<div className={styles.verifiedResult}>
+						<small>검증된 사업 결과</small>
+						<strong>{landbook.verifiedResult}</strong>
+						<span>기여: 유료 보고서 프론트엔드 개발 담당</span>
+					</div>
 					<div className={styles.ownership}><small>직접 담당</small>{landbook.contribution.slice(0, 3).map((item) => <p key={item}>• {item}</p>)}</div>
 				</div>
 				<div><ProductImage id={landbook.videoId} alt='Landbook 제품 화면' /><Stack items={landbook.stack} /></div>
 			</section>
 
-			<section className={`${styles.slide} ${styles.architecture}`} id='landbook-architecture'>
+			<section className={`${styles.slide} ${styles.architecture}`} data-pdf-slide id='landbook-architecture'>
 				<SlideNumber>03</SlideNumber>
 				<div className={styles.sectionTitle}><p className={styles.eyebrow}>LANDBOOK · FRONTEND ARCHITECTURE</p><h2>입력에서 유료 보고서까지</h2><p><b>주황색 영역</b>은 직접 설계·구현한 프론트엔드 책임 범위입니다.</p></div>
 				<div className={styles.archDiagram}>
@@ -85,7 +91,7 @@ export default function SlidesPage() {
 				</div>
 			</section>
 
-			<section className={`${styles.slide} ${styles.improvement}`} id='landbook-improvement'>
+			<section className={`${styles.slide} ${styles.improvement}`} data-pdf-slide id='landbook-improvement'>
 				<SlideNumber>04</SlideNumber>
 				<div className={styles.sectionTitle}><p className={styles.eyebrow}>LANDBOOK · BEFORE / AFTER</p><h2>복잡한 입력과 화면 로직을 분리했습니다.</h2></div>
 				<div className={styles.beforeAfter}>
@@ -93,22 +99,25 @@ export default function SlidesPage() {
 					<span>→</span>
 					<div className={styles.after}><small>AFTER · 직접 개선</small><h3>역할별 구조 분리</h3><ul><li>커스텀 훅과 React Query로 비동기 흐름 분리</li><li>단계형 폼, Yup 검증, debounce 적용</li><li>함수형 컴포넌트와 styled-components로 전환</li></ul></div>
 				</div>
-				<div className={styles.evidenceStrip}><strong>확인 가능한 결과</strong><span>유료 보고서 출시</span><span>첫 매출 발생</span><span>지도·3D 핵심 기능 제품 적용</span><small>※ 당시 성능 지표는 별도 기록이 없어 임의 수치를 사용하지 않았습니다.</small></div>
+				<div className={styles.resultGroups}>
+					<div><strong>사업 결과</strong><span>유료 보고서 출시</span><span>Landbook 첫 매출 발생</span></div>
+					<div><strong>주요 구현 결과</strong><span>지도 기반 필지 인터랙션</span><span>Three.js 3D 결과 화면</span></div>
+				</div>
 			</section>
 
-			<section className={`${styles.slide} ${styles.project} ${styles.green}`} id='lb-developer'>
+			<section className={`${styles.slide} ${styles.project} ${styles.green}`} data-pdf-slide id='lb-developer'>
 				<SlideNumber>05</SlideNumber>
 				<div className={styles.projectCopy}>
 					<p className={styles.eyebrow}>PROJECT 02 · {lbDeveloper.period}</p>
 					<h2>{lbDeveloper.name}<br /><span>{lbDeveloper.title}</span></h2>
 					<p className={styles.lead}>문서로 진행하던 가로주택정비사업 검토를 사용자·운영자 웹앱과 자동설계 결과 흐름으로 전환했습니다.</p>
-					<div className={styles.scopeGrid}>{lbDeveloper.verifiedScope.map((item) => { const [count, ...label] = item.split(' '); return <div key={item}><strong>{count}</strong><span>{label.join(' ')}</span></div>; })}</div>
+					<div className={styles.scopeSection}><small>담당 범위</small><div className={styles.scopeGrid}>{lbDeveloper.verifiedScope.map((item) => { const [count, ...label] = item.split(' '); return <div key={item}><strong>{count}</strong><span>{label.join(' ')}</span></div>; })}</div></div>
 					<div className={styles.ownership}><small>직접 담당</small>{lbDeveloper.contribution.slice(0, 3).map((item) => <p key={item}>• {item}</p>)}</div>
 				</div>
 				<div><ProductImage id={lbDeveloper.videoId} alt='LB Developer 제품 화면' /><Stack items={lbDeveloper.stack} /></div>
 			</section>
 
-			<section className={`${styles.slide} ${styles.architecture} ${styles.architectureGreen}`} id='lb-architecture'>
+			<section className={`${styles.slide} ${styles.architecture} ${styles.architectureGreen}`} data-pdf-slide id='lb-architecture'>
 				<SlideNumber>06</SlideNumber>
 				<div className={styles.sectionTitle}><p className={styles.eyebrow}>LB DEVELOPER · SERVICE ARCHITECTURE</p><h2>두 화면, 하나의 자동설계 흐름</h2><p><b>주황색 영역</b>은 직접 주도한 프론트엔드·배포 범위, 회색은 협업 연동 영역입니다.</p></div>
 				<div className={styles.lbDiagram}>
@@ -120,7 +129,7 @@ export default function SlidesPage() {
 				<div className={`${styles.delivery} ${styles.owned}`}><small>직접 구축한 배포 흐름</small><b>GitHub</b><i>→</i><b>GitHub Actions</b><i>→</i><b>Docker Build</b><i>→</i><b>AWS CLI Deploy</b></div>
 			</section>
 
-			<section className={`${styles.slide} ${styles.decisions}`} id='lb-decisions'>
+			<section className={`${styles.slide} ${styles.decisions}`} data-pdf-slide id='lb-decisions'>
 				<SlideNumber>07</SlideNumber>
 				<div className={styles.sectionTitle}><p className={styles.eyebrow}>LB DEVELOPER · DECISIONS & EVIDENCE</p><h2>빠른 출시와 운영을 함께 고려했습니다.</h2></div>
 				<div className={styles.decisionTable}>
@@ -129,13 +138,14 @@ export default function SlidesPage() {
 					<div><strong>대규모 건축물 표시</strong><b>Three.js</b><p>렌더링과 리소스 정리 로직을 개선해 화면 안정성 보완</p></div>
 					<div><strong>수동 배포 의존</strong><b>CI/CD</b><p>GitHub Actions, Docker, AWS CLI로 반복 배포 과정 자동화</p></div>
 				</div>
-				<div className={styles.evidenceStrip}><strong>검증 가능한 범위</strong>{lbDeveloper.verifiedScope.map((item) => <span key={item}>{item}</span>)}<small>※ 처리 속도·감소율은 당시 측정 자료가 없어 기재하지 않았습니다.</small></div>
+				<p className={styles.decisionPrinciple}><strong>선택 기준</strong> 제한된 일정 안에서 구현 속도뿐 아니라 상태 흐름의 명확성, 운영 안정성, 반복 배포 비용을 함께 고려했습니다.</p>
 			</section>
 
-			<section className={`${styles.slide} ${styles.closing}`} id='closing'>
+			<section className={`${styles.slide} ${styles.closing}`} data-pdf-slide id='closing'>
 				<SlideNumber>08</SlideNumber>
 				<div><p className={styles.eyebrow}>EARLIER EXPERIENCE</p><h2>도메인을 이해하고<br />제품으로 연결합니다.</h2><p>Landbook 구 버전 유지보수, Unity 사회주택 자동설계, Rhino 가로주택 검토 플러그인 경험을 통해 건축·부동산 도메인과 2D/3D 시각화의 기반을 쌓았습니다.</p></div>
 				<div className={styles.contactCard}><small>CONTACT</small><strong>{profile.name}</strong><span>{profile.role}</span><a href={`mailto:${profile.email}`}>{profile.email}</a><a href='/resume'>이력서 보기 →</a></div>
+				<p className={styles.metricsNote}>성과 수치는 당시 확인 가능한 기록만 사용했습니다.</p>
 			</section>
 		</main>
 	);

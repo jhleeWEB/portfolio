@@ -12,6 +12,9 @@
 .skillGrid p { margin-top:7px; color:#536057; font-size:13px; line-height:1.55; }
 .stack,.scope { display:flex; flex-wrap:wrap; gap:6px; margin-top:18px; }
 .stack span,.scope span { padding:6px 9px; border:1px solid #aeb9af; font-size:10px; font-weight:800; }
+.scopeBlock { margin-top:18px; }
+.scopeBlock > b { color:#68746c; font:900 10px monospace; }
+.scopeBlock .scope { margin-top:8px; }
 .experience { display:grid; grid-template-columns:.65fr 1.35fr; gap:40px; }
 .experience h3 { font-size:24px; }
 .experience small,.experience > p { color:#536057; line-height:1.65; }
@@ -26,7 +29,7 @@
 .project li { margin-top:8px; line-height:1.55; }
 .result { margin-top:18px; padding:12px; border-left:4px solid #e65b37; background:#fff2eb; }
 .result b { color:#e65b37; margin-right:8px; }
-.note { margin-top:15px; color:#778179; font-size:10px; }
+.result span { display:block; margin-top:7px; color:#68746c; font-size:10px; font-weight:800; }
 .earlyProjects { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
 .earlyProjects div { padding:18px; border:1px solid #c5cec6; }
 .earlyProjects span { display:block; margin-top:6px; color:#68746c; font-size:11px; }

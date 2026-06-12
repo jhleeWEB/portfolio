@@ -11,6 +11,8 @@
 	"dependencies": {
 		"@heroui/react": "^2.7.5",
 		"framer-motion": "^12.5.0",
+		"html2canvas": "^1.4.1",
+		"jspdf": "^4.2.1",
 		"next": "^15.3.0",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",

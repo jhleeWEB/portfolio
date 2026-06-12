@@ -38,16 +38,14 @@ export default function ResumePage() {
 			<section><h2>주요 프로젝트</h2>
 				<article className={styles.project}>
 					<header><div><p>{landbook.name}</p><h3>{landbook.title}</h3></div><div><strong>{landbook.role}</strong><span>{landbook.period}</span></div></header>
-					<p className={styles.result}><b>검증된 결과</b> {landbook.verifiedResult}</p>
+					<p className={styles.result}><b>검증된 사업 결과</b> {landbook.verifiedResult}<span>기여: 유료 보고서 프론트엔드 개발 담당</span></p>
 					<BulletList items={landbook.contribution} />
-					<p className={styles.note}>당시 성능 지표는 별도 기록이 없어 감소율·처리 속도 등 임의 수치를 기재하지 않았습니다.</p>
 				</article>
 
 				<article className={styles.project}>
 					<header><div><p>{lbDeveloper.name}</p><h3>{lbDeveloper.title}</h3></div><div><strong>{lbDeveloper.role}</strong><span>{lbDeveloper.period}</span></div></header>
-					<div className={styles.scope}>{lbDeveloper.verifiedScope.map((item) => <span key={item}>{item}</span>)}</div>
+					<div className={styles.scopeBlock}><b>담당 범위</b><div className={styles.scope}>{lbDeveloper.verifiedScope.map((item) => <span key={item}>{item}</span>)}</div></div>
 					<BulletList items={lbDeveloper.contribution} />
-					<p className={styles.note}>처리 속도와 성능 개선율은 당시 측정 자료가 없어 검증 가능한 구현 범위만 기재했습니다.</p>
 				</article>
 
 				<article className={styles.project}><header><div><p>Landbook v1</p><h3>토지 가치평가 서비스 구 버전</h3></div><div><strong>프론트엔드 개발자</strong><span>2018.03 - 2019.10</span></div></header><BulletList items={['Next.js v6, React v15 기반 레거시 프로젝트 유지보수와 신규 기능 개발', 'BEM과 Sass를 도입해 스타일 클래스 충돌과 구조 가독성 개선', '구 버전 운영을 통해 신규 버전에 필요한 도메인과 사용자 흐름 습득']} /></article>
