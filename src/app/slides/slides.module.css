@@ -7,10 +7,10 @@
 .navigation nav a { display:flex; gap:5px; padding:7px; font-size:10px; font-weight:800; white-space:nowrap; }
 .navigation nav small { color:#718078; }
 .resumeLink { border-bottom:2px solid var(--orange); font-size:11px; font-weight:900; }
-.pdfButton { position:fixed; left:24px; bottom:22px; z-index:45; display:grid; place-items:center; width:52px; height:52px; border:0; border-radius:50%; background:var(--orange); color:white; box-shadow:0 8px 22px rgb(24 32 25 / 24%); font:900 10px monospace; cursor:pointer; transition:transform .18s ease,box-shadow .18s ease,background .18s ease; }
+.pdfButton { position:fixed; left:24px; bottom:22px; z-index:45; display:grid; place-items:center; width:52px; min-width:52px; height:52px; padding:0; border:0; border-radius:50%; background:var(--orange); color:white; box-shadow:0 8px 22px rgb(24 32 25 / 24%); font:900 10px monospace; cursor:pointer; transition:transform .18s ease,box-shadow .18s ease,background .18s ease; }
 .pdfButton:hover { transform:translateY(-2px); background:#c94729; box-shadow:0 12px 28px rgb(24 32 25 / 30%); }
 .pdfButton:focus-visible { outline:3px solid white; box-shadow:0 0 0 5px var(--ink); }
-.pdfButton:disabled { cursor:wait; opacity:.75; transform:none; }
+.pdfButton:disabled,.pdfButton[data-disabled='true'] { cursor:wait; opacity:.75; transform:none; }
 .slide { position:relative; display:grid; container-type:inline-size; align-items:center; width:min(100%,1122px); aspect-ratio:297/210; margin:0 auto; padding:8.38cqw 6.06cqw 4.28cqw; overflow:hidden; background:var(--paper); scroll-snap-align:start; scroll-snap-stop:always; }
 .slideNumber { position:absolute; right:26px; bottom:20px; color:#68746c; font:800 10px monospace; }
 .eyebrow { margin-bottom:16px; color:var(--green); font-size:10px; font-weight:900; text-transform:uppercase; }
@@ -128,7 +128,7 @@
 .metricsNote { position:absolute; left:clamp(28px,6vw,100px); bottom:20px; color:#7a817b; font-size:9px; }
 @media(max-width:900px){
 	.navigation{grid-template-columns:1fr auto;padding:8px 13px}.navigation nav{position:fixed;left:0;right:0;bottom:0;justify-content:flex-start;padding:6px 9px;border-top:1px solid var(--line);background:rgb(243 245 239 / 96%)}.navigation nav a{flex-direction:column;gap:1px}.identity strong{display:none}
-	.pdfButton{left:14px;bottom:72px;width:48px;height:48px}
+	.pdfButton{left:14px;bottom:72px;width:48px;min-width:48px;height:48px}
 	.slide{width:100%;min-height:100svh;aspect-ratio:auto;margin:0;padding:84px 19px 82px;overflow-y:auto}.profile,.project,.closing{grid-template-columns:1fr;gap:28px}.profile{background:var(--paper)}.profile h1{font-size:clamp(70px,23vw,108px)}.role{font-size:clamp(24px,8vw,36px)}.summary{font-size:13px}.skillPanel{padding:17px}
 	.projectCopy h2{font-size:clamp(46px,14vw,70px)}.productImage{border-width:4px;box-shadow:8px 8px 0 #a5b4a7}.sectionTitle{grid-template-columns:1fr;gap:12px}.sectionTitle h2{font-size:clamp(38px,11vw,58px)}
 	.archDiagram,.lbDiagram{grid-template-columns:1fr}.archDiagram>i,.lbDiagram>i{justify-self:center;transform:rotate(90deg)}.stateLayer{grid-column:auto;grid-template-columns:1fr}.appBoundary{grid-template-columns:1fr}.delivery{flex-wrap:wrap}.delivery small{flex-basis:100%;text-align:center}

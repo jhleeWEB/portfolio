@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '@heroui/react';
 import { useState } from 'react';
 import styles from './slides.module.css';
 
@@ -84,15 +85,16 @@ export default function PrintPdfButton() {
 	};
 
 	return (
-		<button
+		<Button
 			aria-label='포트폴리오를 PDF로 저장'
 			className={styles.pdfButton}
-			disabled={isExporting}
-			onClick={handleDownload}
+			isDisabled={isExporting}
+			isIconOnly
+			onPress={handleDownload}
+			radius='full'
 			title='PDF로 저장'
-			type='button'
 		>
 			{isExporting ? '...' : 'PDF'}
-		</button>
+		</Button>
 	);
 }
